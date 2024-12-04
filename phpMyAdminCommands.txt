@@ -2,24 +2,24 @@ create database school_management;
 
 CREATE TABLE groups (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE teachers (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE students (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     group_id INT,
     FOREIGN KEY (group_id) REFERENCES groups(id)
 );
 
 CREATE TABLE courses (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     teacher_id INT,
     FOREIGN KEY (teacher_id) REFERENCES teachers(id)
 );
